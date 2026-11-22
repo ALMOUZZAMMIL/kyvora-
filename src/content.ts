@@ -1,73 +1,121 @@
-// All page text and images live here, so swapping in your own details is one file.
+// All site text lives here. Edit freely: FR is the default language, EN is the toggle.
 
-export const site = {
-  // Big hero heading after "Hi, i'm" is replaced by this full line
-  heroHeading: 'kyvora',
-  tagline: 'your business deserves to be seen. websites, design, ai videos and social content',
-  about:
-    "Kyvora is a creative tech agency helping businesses get seen. We design websites, flyers and visual identities, produce AI videos and run social content, for brands in French and English. Let's build something incredible together!",
-  // Replace 000000000 with your WhatsApp number in international format, digits only (e.g. 2376XXXXXXXX)
-  contactHref: 'https://wa.me/000000000',
-  contactLabel: 'WhatsApp',
-  portrait:
-    'https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png',
-};
+// Replace with the real WhatsApp number (international format, digits only).
+export const WHATSAPP_NUMBER = '000000000000'
+export const whatsappLink = (msg: string) =>
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`
 
-export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#projects' },
-  { label: 'Contact', href: site.contactHref },
-];
+export type Lang = 'fr' | 'en'
 
-const m = (slug: string) => `https://motionsites.ai/assets/${slug}.gif`;
-export const marqueeImages = [
-  m('hero-space-voyage-preview-eECLH3Yc'),
-  m('hero-codenest-preview-Cgppc2qV'),
-  m('hero-vex-ventures-preview-BczMFIiw'),
-  m('hero-stellar-ai-v2-preview-DjvxjG3C'),
-  m('hero-asme-preview-B_nGDnTP'),
-  m('hero-transform-data-preview-Cx5OU29N'),
-  m('hero-vitara-preview-Cjz2QYyU'),
-  m('hero-terra-preview-BFjrCr7T'),
-  m('hero-skyelite-preview-DHaZIgUv'),
-  m('hero-aethera-preview-DknSlcTa'),
-  m('hero-designpro-preview-D8c5_een'),
-  m('hero-stellar-ai-preview-D3HL6bw1'),
-  m('hero-xportfolio-preview-D4A8maiC'),
-  m('hero-orbit-web3-preview-BXt4OttD'),
-  m('hero-nexora-preview-cx5HmUgo'),
-  m('hero-evr-ventures-preview-DZxeVFEX'),
-  m('hero-planet-orbit-preview-DWAP8Z1P'),
-  m('hero-new-era-preview-CocuDUm9'),
-  m('hero-wealth-preview-B70idl_u'),
-  m('hero-luminex-preview-CxOP7ce6'),
-  m('hero-celestia-preview-0yO3jXO8'),
-];
-
-const f = (file: string) =>
-  `https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/${file}`;
-export const aboutDecor = {
-  moon: f('moon_icon.11395d36.png'),
-  object: f('p59_1.4659672e.png'),
-  lego: f('lego_icon-1.703bb594.png'),
-  group: f('Group_134-1.2e04f3ce.png'),
-};
-
-export const services = [
-  { name: 'Websites', description: 'Fast, modern websites that make your business look credible and bring you clients, from one-page sites to full online shops.' },
-  { name: 'Flyers & Design', description: 'Flyers, posters, logos and visual identities that grab attention online and in print.' },
-  { name: 'AI Videos', description: 'Eye-catching AI-powered video ads and promos made fast, ready for Instagram, TikTok and WhatsApp status.' },
-  { name: 'Social Content', description: 'Posts, stories and campaigns that keep your brand active and growing on social media.' },
-];
-
-export type Project = { name: string; category: string; href: string; images: [string, string, string] };
-export const projects: Project[] = [
-  {
-    name: 'CFPMA',
-    category: 'Training center website',
-    href: 'https://cfpma-maloum.com',
-    // Real screenshots of the Centre de Formation Professionnelle Maloum & Ayena site (public/work/)
-    images: ['work/cfpma-1.jpg', 'work/cfpma-2.jpg', 'work/cfpma-3.jpg'],
+const fr = {
+  nav: { services: 'Services', process: 'Méthode', work: 'Projets', contact: 'Contact', cta: 'Discutons' },
+  hero: {
+    kicker: 'Studio créatif · augmenté par l’IA',
+    title: ['Votre business', 'mérite d’être', 'vu.'],
+    sub: 'Kyvora relie stratégie, design et intelligence artificielle pour créer des sites, visuels et vidéos qui captent l’attention et la transforment en clients.',
+    primary: 'Lancer mon projet',
+    secondary: 'Voir nos projets',
+    waMsg: 'Bonjour Kyvora, je veux rendre mon business visible.',
+    scroll: 'Défiler',
+    hud: ['Signal', 'Créativité', 'Impact'],
   },
-];
+  marquee: ['Sites web', 'Identité visuelle', 'Vidéos IA', 'Flyers', 'Réseaux sociaux', 'Landing pages', 'Motion design', 'Branding'],
+  services: {
+    label: '01 — Le noyau',
+    title: 'Quatre connexions pour être vu partout.',
+    items: [
+      { tag: 'WEB', name: 'Sites web', text: 'Sites vitrines et landing pages rapides, animés, pensés pour convertir sur mobile.', points: ['Design sur-mesure', 'SEO de base', 'Mise en ligne incluse'] },
+      { tag: 'DESIGN', name: 'Flyers & design', text: 'Flyers, affiches, menus et identités visuelles qui se remarquent dans la rue comme en ligne.', points: ['Print & digital', 'Charte graphique', 'Livraison rapide'] },
+      { tag: 'IA', name: 'Vidéos IA', text: 'Spots publicitaires et vidéos produits générés par IA, sans tournage ni gros budget.', points: ['Formats Reels / TikTok', 'Voix off', 'Sous-titres'] },
+      { tag: 'SOCIAL', name: 'Contenu social', text: 'Posts, carrousels et stories cohérents qui gardent votre marque active chaque semaine.', points: ['Calendrier éditorial', 'Templates de marque', 'Visuels prêts à publier'] },
+    ],
+  },
+  process: {
+    label: '02 — La méthode',
+    title: 'Du premier signal au lancement.',
+    steps: [
+      { k: 'Signal', t: 'On écoute', d: 'Un échange WhatsApp pour comprendre votre activité, vos clients et votre objectif.' },
+      { k: 'Synapse', t: 'On connecte', d: 'Concept, direction artistique et plan de contenu validés avec vous avant de produire.' },
+      { k: 'Forge', t: 'On crée', d: 'Design, développement et génération IA, avec des retours rapides à chaque étape.' },
+      { k: 'Lancement', t: 'On propulse', d: 'Mise en ligne, fichiers finaux et conseils pour que votre présence continue de grandir.' },
+    ],
+  },
+  work: {
+    label: '03 — Projets récents',
+    title: 'Des marques qui se font remarquer.',
+    items: [
+      { name: 'CFPMA', type: 'Centre de formation · site web', year: '2025', hue: 18, url: 'https://cfpma-maloum.com', image: 'work/cfpma-1.jpg' },
+    ],
+    cta: 'Visiter le site',
+  },
+  stats: [
+    { v: 48, s: 'h', l: 'pour un premier rendu' },
+    { v: 4, s: '', l: 'expertises sous un même toit' },
+    { v: 100, s: '%', l: 'pensé pour le mobile' },
+    { v: 2, s: '', l: 'langues : FR & EN' },
+  ],
+  cta: {
+    label: '04 — Connexion',
+    title: ['Prêt à être', 'vu ?'],
+    sub: 'Écrivez-nous sur WhatsApp. Réponse rapide, devis clair, sans engagement.',
+    button: 'Écrire sur WhatsApp',
+  },
+  footer: { tagline: 'Votre business mérite d’être vu.', rights: 'Tous droits réservés.', demo: 'Studio créatif' },
+}
+
+const en: typeof fr = {
+  nav: { services: 'Services', process: 'Method', work: 'Work', contact: 'Contact', cta: 'Let’s talk' },
+  hero: {
+    kicker: 'Creative studio · AI-augmented',
+    title: ['Your business', 'deserves to be', 'seen.'],
+    sub: 'Kyvora connects strategy, design and artificial intelligence to build websites, visuals and videos that capture attention and turn it into customers.',
+    primary: 'Start my project',
+    secondary: 'See our work',
+    waMsg: 'Hi Kyvora, I want my business to be seen.',
+    scroll: 'Scroll',
+    hud: ['Signal', 'Creativity', 'Impact'],
+  },
+  marquee: ['Websites', 'Visual identity', 'AI videos', 'Flyers', 'Social media', 'Landing pages', 'Motion design', 'Branding'],
+  services: {
+    label: '01 — The core',
+    title: 'Four connections to be seen everywhere.',
+    items: [
+      { tag: 'WEB', name: 'Websites', text: 'Fast, animated showcase sites and landing pages built to convert on mobile.', points: ['Custom design', 'SEO basics', 'Launch included'] },
+      { tag: 'DESIGN', name: 'Flyers & design', text: 'Flyers, posters, menus and visual identities that stand out on the street and online.', points: ['Print & digital', 'Brand guidelines', 'Fast delivery'] },
+      { tag: 'AI', name: 'AI videos', text: 'AI-generated ads and product videos, no film crew or big budget needed.', points: ['Reels / TikTok formats', 'Voice-over', 'Captions'] },
+      { tag: 'SOCIAL', name: 'Social content', text: 'Consistent posts, carousels and stories that keep your brand active every week.', points: ['Content calendar', 'Brand templates', 'Ready-to-post visuals'] },
+    ],
+  },
+  process: {
+    label: '02 — The method',
+    title: 'From first signal to launch.',
+    steps: [
+      { k: 'Signal', t: 'We listen', d: 'A WhatsApp chat to understand your business, your customers and your goal.' },
+      { k: 'Synapse', t: 'We connect', d: 'Concept, art direction and content plan agreed with you before production.' },
+      { k: 'Forge', t: 'We create', d: 'Design, development and AI generation, with quick feedback at every step.' },
+      { k: 'Launch', t: 'We propel', d: 'Go-live, final files and advice so your presence keeps growing.' },
+    ],
+  },
+  work: {
+    label: '03 — Recent work',
+    title: 'Brands that get noticed.',
+    items: fr.work.items.map((w, i) => ({ ...w, type: ['Training centre · website'][i] })),
+    cta: 'View project',
+  },
+  stats: [
+    { v: 48, s: 'h', l: 'to a first draft' },
+    { v: 4, s: '', l: 'skills under one roof' },
+    { v: 100, s: '%', l: 'mobile-first' },
+    { v: 2, s: '', l: 'languages: FR & EN' },
+  ],
+  cta: {
+    label: '04 — Connect',
+    title: ['Ready to be', 'seen?'],
+    sub: 'Message us on WhatsApp. Fast reply, clear quote, no commitment.',
+    button: 'Message on WhatsApp',
+  },
+  footer: { tagline: 'Your business deserves to be seen.', rights: 'All rights reserved.', demo: 'Creative studio' },
+}
+
+export const content = { fr, en }
+export type Content = typeof fr

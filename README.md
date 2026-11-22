@@ -1,20 +1,15 @@
-# Portfolio
+# Kyvora Synapse — 3D showcase site
 
-3D creator portfolio built with React, TypeScript, Tailwind CSS and Framer Motion. Hosted free on GitHub Pages.
+A one-page showcase site for Kyvora with an interactive 3D "neural network" hero (three.js via React Three Fiber), scroll animations (Framer Motion) and an FR/EN toggle.
 
-## Change the content
-Everything you'd want to edit (name, tagline, about text, services, projects, images, contact link) is in **`src/content.ts`**.
+- All text, the WhatsApp number and project names: `src/content.ts`
+- 3D scene: `src/components/NeuralCore.tsx`
+- Styles and colours: `src/index.css` (tokens at the top)
 
-## Run locally
 ```bash
 npm install
-npm run dev
+npm run dev     # local preview
+npm run build   # production build in dist/
 ```
 
-## Live site
-https://kyvora-lyart.vercel.app (Vercel redeploys on every push to `main`)
-
-## Publish on GitHub Pages instead (optional)
-1. Push to the `main` branch.
-2. In the repo go to **Settings → Pages** and set **Source** to **GitHub Actions** (one time only).
-3. Every push to `main` rebuilds and publishes the site at `https://<username>.github.io/<repo>/`.
+Deploy: import the repo on Vercel (framework preset Vite, defaults are fine).
