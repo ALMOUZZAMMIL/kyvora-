@@ -1,19 +1,23 @@
 // All page text and images live here, so swapping in your own details is one file.
+// Project images below are still template placeholders: replace them with real screenshots.
 
 export const site = {
-  name: 'jack',
-  tagline: 'a 3d creator driven by crafting striking and unforgettable projects',
+  // Big hero heading after "Hi, i'm" is replaced by this full line
+  heroHeading: 'kyvora',
+  tagline: 'your business deserves to be seen. websites, design, ai videos and social content',
   about:
-    "With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!",
-  contactHref: 'mailto:you@example.com',
+    "Kyvora is a creative tech agency helping businesses get seen. We design websites, flyers and visual identities, produce AI videos and run social content, for brands in French and English. Let's build something incredible together!",
+  // Replace 000000000 with your WhatsApp number in international format, digits only (e.g. 2376XXXXXXXX)
+  contactHref: 'https://wa.me/000000000',
+  contactLabel: 'WhatsApp',
   portrait:
     'https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png',
 };
 
 export const navLinks = [
   { label: 'About', href: '#about' },
-  { label: 'Price', href: '#services' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Services', href: '#services' },
+  { label: 'Work', href: '#projects' },
   { label: 'Contact', href: site.contactHref },
 ];
 
@@ -52,11 +56,10 @@ export const aboutDecor = {
 };
 
 export const services = [
-  { name: '3D Modeling', description: 'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.' },
-  { name: 'Rendering', description: 'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.' },
-  { name: 'Motion Design', description: 'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.' },
-  { name: 'Branding', description: 'Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.' },
-  { name: 'Web Design', description: 'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.' },
+  { name: 'Websites', description: 'Fast, modern websites that make your business look credible and bring you clients, from one-page sites to full online shops.' },
+  { name: 'Flyers & Design', description: 'Flyers, posters, logos and visual identities that grab attention online and in print.' },
+  { name: 'AI Videos', description: 'Eye-catching AI-powered video ads and promos made fast, ready for Instagram, TikTok and WhatsApp status.' },
+  { name: 'Social Content', description: 'Posts, stories and campaigns that keep your brand active and growing on social media.' },
 ];
 
 const h = (file: string) =>
@@ -67,7 +70,7 @@ const h = (file: string) =>
 export type Project = { name: string; category: string; href: string; images: [string, string, string] };
 export const projects: Project[] = [
   {
-    name: 'Nextlevel Studio',
+    name: 'MİRAZ',
     category: 'Client',
     href: '#',
     images: [
@@ -77,8 +80,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Aura Brand Identity',
-    category: 'Personal',
+    name: 'Elevate',
+    category: 'Client',
     href: '#',
     images: [
       h('hf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f'),
@@ -87,8 +90,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Solaris Digital',
-    category: 'Client',
+    name: 'CFPMA',
+    category: 'Website',
     href: '#',
     images: [
       h('hf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f'),

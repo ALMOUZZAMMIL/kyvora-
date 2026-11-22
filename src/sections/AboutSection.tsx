@@ -28,7 +28,7 @@ export default function AboutSection() {
             className="hero-heading text-center font-black uppercase leading-none tracking-tight"
             style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
           >
-            About me
+            About us
           </FadeIn>
           <AnimatedText
             text={site.about}

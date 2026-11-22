@@ -60,7 +60,7 @@ export default function ProjectsSection() {
         className="hero-heading mb-10 text-center font-black uppercase leading-none tracking-tight sm:mb-16"
         style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
       >
-        Project
+        Our work
       </FadeIn>
       <div ref={ref} className="mx-auto max-w-7xl">
         {projects.map((p, i) => (
