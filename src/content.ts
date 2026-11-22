@@ -65,9 +65,9 @@ export type Project = { name: string; category: string; href: string; images: [s
 export const projects: Project[] = [
   {
     name: 'CFPMA',
-    category: 'School platform',
-    href: 'https://cfpma-maloum-ayena.vercel.app',
-    // Real screenshots of the Collège Bilingue Maloum & Ayena portal (public/work/)
+    category: 'Training center website',
+    href: 'https://cfpma-maloum.com',
+    // Real screenshots of the Centre de Formation Professionnelle Maloum & Ayena site (public/work/)
     images: ['work/cfpma-1.jpg', 'work/cfpma-2.jpg', 'work/cfpma-3.jpg'],
   },
 ];
