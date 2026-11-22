@@ -11,7 +11,10 @@ npm install
 npm run dev
 ```
 
-## Publish (free)
+## Live site
+https://kyvora-lyart.vercel.app (Vercel redeploys on every push to `main`)
+
+## Publish on GitHub Pages instead (optional)
 1. Push to the `main` branch.
 2. In the repo go to **Settings → Pages** and set **Source** to **GitHub Actions** (one time only).
 3. Every push to `main` rebuilds and publishes the site at `https://<username>.github.io/<repo>/`.
