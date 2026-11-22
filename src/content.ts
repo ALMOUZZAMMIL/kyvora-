@@ -70,10 +70,4 @@ export const projects: Project[] = [
     // Real screenshots of the Centre de Formation Professionnelle Maloum & Ayena site (public/work/)
     images: ['work/cfpma-1.jpg', 'work/cfpma-2.jpg', 'work/cfpma-3.jpg'],
   },
-  {
-    name: 'Kyvora Synapse',
-    category: 'Interactive 3D showcase site · 2026',
-    href: 'https://kyvora-synaptic-yb7p.vercel.app',
-    images: ['work/synapse-1.jpg', 'work/synapse-2.jpg', 'work/synapse-3.jpg'],
-  },
 ];
