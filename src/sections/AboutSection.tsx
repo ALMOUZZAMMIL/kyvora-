@@ -7,16 +7,16 @@ export default function AboutSection() {
   return (
     <section id="about" className="relative flex min-h-screen items-center justify-center px-5 py-20 sm:px-8 md:px-10">
       <FadeIn delay={0.1} x={-80} y={0} duration={0.9} className="absolute left-[1%] top-[4%] w-[120px] sm:left-[2%] sm:w-[160px] md:left-[4%] md:w-[210px]">
-        <img src={aboutDecor.moon} alt="" className="w-full" />
+        <img src={aboutDecor.moon} alt="" loading="lazy" decoding="async" className="w-full" />
       </FadeIn>
       <FadeIn delay={0.25} x={-80} y={0} duration={0.9} className="absolute bottom-[8%] left-[3%] w-[100px] sm:left-[6%] sm:w-[140px] md:left-[10%] md:w-[180px]">
-        <img src={aboutDecor.object} alt="" className="w-full" />
+        <img src={aboutDecor.object} alt="" loading="lazy" decoding="async" className="w-full" />
       </FadeIn>
       <FadeIn delay={0.15} x={80} y={0} duration={0.9} className="absolute right-[1%] top-[4%] w-[120px] sm:right-[2%] sm:w-[160px] md:right-[4%] md:w-[210px]">
-        <img src={aboutDecor.lego} alt="" className="w-full" />
+        <img src={aboutDecor.lego} alt="" loading="lazy" decoding="async" className="w-full" />
       </FadeIn>
       <FadeIn delay={0.3} x={80} y={0} duration={0.9} className="absolute bottom-[8%] right-[3%] w-[130px] sm:right-[6%] sm:w-[170px] md:right-[10%] md:w-[220px]">
-        <img src={aboutDecor.group} alt="" className="w-full" />
+        <img src={aboutDecor.group} alt="" loading="lazy" decoding="async" className="w-full" />
       </FadeIn>
 
       <div className="relative z-10 flex flex-col items-center gap-16 sm:gap-20 md:gap-24">

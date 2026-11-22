@@ -91,12 +91,9 @@ export const projects: Project[] = [
   },
   {
     name: 'CFPMA',
-    category: 'Website',
-    href: '#',
-    images: [
-      h('hf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f'),
-      h('hf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b'),
-      h('hf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee'),
-    ],
+    category: 'School platform',
+    href: 'https://cfpma-maloum-ayena.vercel.app',
+    // Real screenshots of the Collège Bilingue Maloum & Ayena portal (public/work/)
+    images: ['work/cfpma-1.jpg', 'work/cfpma-2.jpg', 'work/cfpma-3.jpg'],
   },
 ];

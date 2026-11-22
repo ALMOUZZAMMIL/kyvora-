@@ -33,11 +33,11 @@ function Card({ project, index, total, progress }: { project: Project; index: nu
         </div>
         <div className="flex gap-3 sm:gap-4">
           <div className="flex w-[40%] flex-col gap-3 sm:gap-4">
-            <img src={a} alt="" loading="lazy" className={`w-full object-cover ${radius}`} style={{ height: 'clamp(130px, 16vw, 230px)' }} />
-            <img src={b} alt="" loading="lazy" className={`w-full object-cover ${radius}`} style={{ height: 'clamp(160px, 22vw, 340px)' }} />
+            <img src={a} alt="" loading="lazy" decoding="async" className={`w-full object-cover object-top ${radius}`} style={{ height: 'clamp(130px, 16vw, 230px)' }} />
+            <img src={b} alt="" loading="lazy" decoding="async" className={`w-full object-cover object-top ${radius}`} style={{ height: 'clamp(160px, 22vw, 340px)' }} />
           </div>
-          <div className="w-[60%]">
-            <img src={c} alt={project.name} loading="lazy" className={`h-full w-full object-cover ${radius}`} />
+          <div className="relative w-[60%]">
+            <img src={c} alt={project.name} loading="lazy" decoding="async" className={`absolute inset-0 h-full w-full object-cover object-top ${radius}`} />
           </div>
         </div>
       </motion.article>
