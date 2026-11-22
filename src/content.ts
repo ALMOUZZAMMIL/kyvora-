@@ -1,5 +1,4 @@
 // All page text and images live here, so swapping in your own details is one file.
-// Project images below are still template placeholders: replace them with real screenshots.
 
 export const site = {
   // Big hero heading after "Hi, i'm" is replaced by this full line
@@ -62,33 +61,8 @@ export const services = [
   { name: 'Social Content', description: 'Posts, stories and campaigns that keep your brand active and growing on social media.' },
 ];
 
-const h = (file: string) =>
-  `https://images.higgs.ai/?default=1&output=webp&url=${encodeURIComponent(
-    `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/${file}.png`,
-  )}&w=1280&q=85`;
-
 export type Project = { name: string; category: string; href: string; images: [string, string, string] };
 export const projects: Project[] = [
-  {
-    name: 'MİRAZ',
-    category: 'Client',
-    href: '#',
-    images: [
-      h('hf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db'),
-      h('hf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8'),
-      h('hf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327'),
-    ],
-  },
-  {
-    name: 'Elevate',
-    category: 'Client',
-    href: '#',
-    images: [
-      h('hf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f'),
-      h('hf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1'),
-      h('hf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea'),
-    ],
-  },
   {
     name: 'CFPMA',
     category: 'School platform',
